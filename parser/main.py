@@ -62,7 +62,7 @@ def set_users_status(stat_coll: Collection, ovpn_interface: OVPNInterface):
         bot.send_message(NOTIFY_TG_ID,
                          f'Скорость трафика превышена!'
                          f'\n'
-                         f'Скорость за последний час - {(data["received"] + data["send"]) / 60 / 60 * 8}Мбит/с')
+                         f'Скорость за последний час - {((data["received"] + data["send"]) / 60 / 60 * 8):.2f}Мбит/с')
 
     print(f"Change connection status for users who offline")
 
